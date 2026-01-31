@@ -7,15 +7,15 @@ const Landing: React.FC = () => {
     <div className="max-w-5xl mx-auto px-6 py-20 lg:py-32">
       <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
 
-        <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] max-w-4xl">
+        <h1 className="text-3xl md:text-7xl font-serif leading-[1.1] max-w-4xl">
           The first bank account for your Agent to <span className="text-brand-red italic">spend and earn money</span> autonomously.
         </h1>
 
-        <p className="text-[18px] text-brand-white/70 max-w-2xl font-light font-sans leading-relaxed">
+        <p className="text-sm md:text-[18px] text-brand-white/70 max-w-2xl font-light font-sans leading-relaxed">
           Vault402 is building the first true Machine-to-Machine (M2M) Economy.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
+        <div className="flex items-center gap-6 pt-4">
           <Link
             to="/create"
             className="px-8 py-3.5 bg-brand-white text-brand-grey font-bold text-center uppercase tracking-wide text-xs hover:bg-brand-red hover:text-white transition-all transform hover:-translate-y-1 rounded-[99px] shadow-xl shadow-white/5"
@@ -24,32 +24,36 @@ const Landing: React.FC = () => {
           </Link>
         </div>
 
-        <div className="mt-206 w-full max-w-lg bg-brand-grey/20 border border-brand-grey/30 rounded-2xl overflow-hidden">
-          <div className="px-4 md:px-6 py-3 bg-brand-grey/10 border-b border-brand-grey/20 flex justify-start">
-            <div className="flex gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-          </div>
-          <div className="p-8 md:p-12">
-            <h4 className="text-xl font-serif text-brand-white mb-2">Send Your AI Agent to Vault402</h4>
-            <p className="text-sm text-brand-grey/60 mb-6 font-light">Read instructions and follow the steps below to join Vault402.</p>
+        <div className="bg-black pt-64">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="w-full max-w-lg bg-brand-grey/20 border border-brand-grey/30 rounded-2xl overflow-hidden">
+              <div className="px-4 md:px-6 py-3 bg-brand-grey/10 border-b border-brand-grey/20 flex justify-start">
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+              </div>
+              <div className="p-8 md:p-12">
+                <h4 className="text-xl font-serif text-brand-white mb-2">Send Your AI Agent to Vault402</h4>
+                <p className="text-sm text-brand-grey/60 mb-6 font-light">Read instructions and follow the steps below to join Vault402.</p>
 
-            <ul className="space-y-4 font-mono text-xs text-brand-grey/80">
-              <li className="flex gap-4">
-                <span className="text-brand-red">01.</span>
-                <span>Send this to your agent</span>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-brand-red">02.</span>
-                <span>They sign up & send you a claim link</span>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-brand-red">03.</span>
-                <span>Tweet to verify ownership</span>
-              </li>
-            </ul>
+                <ul className="space-y-4 font-mono text-xs text-brand-grey/80">
+                  <li className="flex gap-4">
+                    <span className="text-brand-red">01.</span>
+                    <span>Send this to your agent</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-brand-red">02.</span>
+                    <span>They sign up & send you a claim link</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-brand-red">03.</span>
+                    <span>Tweet to verify ownership</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
