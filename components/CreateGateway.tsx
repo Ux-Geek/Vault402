@@ -13,21 +13,18 @@ const CreateGateway: React.FC = () => {
     if (!data.trim()) return;
     setIsGenerating(true);
 
-    // Simulate cryptographic processing & teaser generation
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
     try {
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
-        contents: `Create a brief, highly professional "teaser" summary for the following data which will be sold on a marketplace. Do not reveal sensitive details, just value prop. 
-        Data: ${data.substring(0, 1000)}`,
+        contents: `Generate a high-level technical teaser for this agent payload. Use professional, clinical language. 
+        Payload: ${data.substring(0, 500)}`,
         config: {
-          systemInstruction: "You are an agent specializing in M2M marketplace descriptions. Keep it short and technical."
+          systemInstruction: "You are the Vault402 Metadata Agent. Your job is to describe gated data without leaking its contents."
         }
       });
 
-      const teaser = response.text || "Valuable encrypted payload.";
-      
-      // In a real app, this would be an API call to a backend storing the encrypted blob
+      const teaser = response.text || "Proprietary Agent Output (Encrypted).";
       const mockId = Math.random().toString(36).substring(7);
       const storageObj = {
         id: mockId,
@@ -39,11 +36,10 @@ const CreateGateway: React.FC = () => {
       
       localStorage.setItem(`gate_${mockId}`, JSON.stringify(storageObj));
       
-      // Delay for "dramatic effect" of encryption
       setTimeout(() => {
         setIsGenerating(false);
         navigate(`/reveal/${mockId}`);
-      }, 1500);
+      }, 1200);
     } catch (error) {
       console.error(error);
       setIsGenerating(false);
@@ -54,58 +50,60 @@ const CreateGateway: React.FC = () => {
     <div className="max-w-3xl mx-auto px-6 py-16">
       <div className="space-y-12">
         <header>
-          <h2 className="text-5xl font-serif italic text-brand-white mb-4">Gated Content Deployment</h2>
-          <p className="text-brand-grey text-lg uppercase tracking-wider font-light">Encrypt and monetize your agentic intelligence.</p>
+          <h2 className="text-5xl font-serif italic text-brand-white mb-4">Setup Earning Gate</h2>
+          <p className="text-brand-grey text-lg uppercase tracking-widest font-light">Set your agent's price for the world to pay.</p>
         </header>
 
-        <div className="space-y-6">
-          <div className="flex flex-col gap-2">
-            <label className="text-xs uppercase tracking-widest text-brand-red font-bold">Raw Payload (Code, JSON, Text)</label>
+        <div className="space-y-8">
+          <div className="flex flex-col gap-3">
+            <label className="text-[10px] uppercase tracking-[0.4em] text-brand-red font-bold ml-4">Agent Response Payload</label>
             <textarea 
               value={data}
               onChange={(e) => setData(e.target.value)}
-              placeholder="Paste the valuable data here..."
-              className="w-full h-64 bg-transparent border border-brand-grey/30 p-4 text-brand-white font-mono focus:border-brand-red outline-none transition-colors"
+              placeholder="Enter the data your agent wants to sell..."
+              className="w-full h-48 bg-brand-grey/5 border border-brand-grey/20 p-6 text-brand-white font-mono focus:border-brand-red outline-none transition-all placeholder:text-brand-grey/50 rounded-[2rem]"
             />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex flex-col gap-2">
-              <label className="text-xs uppercase tracking-widest text-brand-red font-bold">Listing Price (USDC)</label>
+            <div className="flex flex-col gap-3">
+              <label className="text-[10px] uppercase tracking-[0.4em] text-brand-red font-bold ml-4">Access Fee (USDC)</label>
               <div className="relative">
                 <input 
                   type="number"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
-                  className="w-full bg-transparent border border-brand-grey/30 p-4 text-brand-white font-mono focus:border-brand-red outline-none transition-colors"
+                  className="w-full bg-brand-grey/5 border border-brand-grey/20 p-6 text-brand-white font-mono focus:border-brand-red outline-none transition-all rounded-full"
                 />
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-brand-grey font-bold">USDC</span>
+                <span className="absolute right-6 top-1/2 -translate-y-1/2 text-brand-grey text-xs font-mono">USDC</span>
               </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-xs uppercase tracking-widest text-brand-red font-bold">Network</label>
-              <div className="w-full bg-brand-grey/10 border border-brand-grey/30 p-4 text-brand-grey font-mono uppercase text-sm flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                x402 Mainnet
+            <div className="flex flex-col gap-3">
+              <label className="text-[10px] uppercase tracking-[0.4em] text-brand-red font-bold ml-4">Settlement Logic</label>
+              <div className="w-full bg-brand-grey/10 border border-brand-grey/20 p-6 text-brand-grey font-mono uppercase text-[10px] flex items-center justify-between rounded-full">
+                <span>Direct-to-Vault</span>
+                <span className="text-brand-red font-bold">Active</span>
               </div>
             </div>
           </div>
 
-          <button 
-            onClick={handleCreate}
-            disabled={isGenerating || !data}
-            className={`w-full py-6 font-bold uppercase tracking-widest transition-all ${
-              isGenerating ? 'bg-brand-grey text-white cursor-not-allowed' : 'bg-brand-white text-brand-grey hover:bg-brand-red hover:text-white'
-            }`}
-          >
-            {isGenerating ? 'Encrypting & Gating...' : 'Generate Gated Link'}
-          </button>
+          <div className="flex justify-center">
+            <button 
+              onClick={handleCreate}
+              disabled={isGenerating || !data}
+              className={`px-12 py-5 font-bold uppercase tracking-[0.3em] text-xs transition-all rounded-[99px] ${
+                isGenerating ? 'bg-brand-grey text-white cursor-not-allowed' : 'bg-brand-white text-brand-grey hover:bg-brand-red hover:text-white'
+              }`}
+            >
+              {isGenerating ? 'Configuring Middleware...' : 'Deploy Gateway'}
+            </button>
+          </div>
         </div>
 
-        <div className="p-6 border-l-2 border-brand-red bg-brand-red/5 space-y-2">
-          <h4 className="text-sm font-bold uppercase tracking-widest text-brand-red">Developer Tip</h4>
-          <p className="text-brand-grey text-sm">
-            You can programmatically deploy gateways by POSTing to <code className="text-brand-white">/api/v1/gate</code> with your agent's private key and payload.
+        <div className="p-8 border border-brand-grey/20 bg-brand-grey/5 flex gap-6 items-start rounded-[2rem]">
+          <div className="w-10 h-10 flex-shrink-0 bg-brand-red/10 rounded-full flex items-center justify-center text-brand-red font-mono text-lg italic">i</div>
+          <p className="text-brand-grey text-sm leading-relaxed">
+            Once deployed, your agent can expose this endpoint. Any requesting agent without a valid <code className="text-brand-white">X-Payment-Token</code> will be served a 402 Payment Required response.
           </p>
         </div>
       </div>

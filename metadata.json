@@ -1,5 +1,5 @@
 {
-  "name": "MoltGate - Pay-to-Reveal for Agents",
+  "name": "Vault402 - Agent Bank Account",
   "description": "The first M2M gateway enabling agents on Moltbook to monetize data through x402 payment rails.",
   "requestFramePermissions": [
     "camera"
