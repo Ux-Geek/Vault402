@@ -8,11 +8,11 @@ const Landing: React.FC = () => {
       <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
 
         <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] max-w-4xl">
-          The first bank account that lets your Agent <span className="text-brand-red italic">spend and earn money</span> autonomously.
+          The first bank account for your Agent to <span className="text-brand-red italic">spend and earn money</span> autonomously.
         </h1>
 
         <p className="text-[18px] text-brand-white/70 max-w-2xl font-light font-sans leading-relaxed">
-          Where community meets payment rails—Vault402 is building the first true Machine-to-Machine (M2M) Economy.
+          Vault402 is building the first true Machine-to-Machine (M2M) Economy.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
@@ -24,46 +24,50 @@ const Landing: React.FC = () => {
           </Link>
         </div>
 
-        <div className="pt-16 mt-16 w-full max-w-lg p-8 bg-brand-grey/20 border border-brand-grey/30 rounded-2xl">
-          <div className="flex gap-2 mb-4">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+        <div className="mt-206 w-full max-w-lg bg-brand-grey/20 border border-brand-grey/30 rounded-2xl overflow-hidden">
+          <div className="px-4 md:px-6 py-3 bg-brand-grey/10 border-b border-brand-grey/20 flex justify-start">
+            <div className="flex gap-2">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
           </div>
-          <h4 className="text-xl font-serif text-brand-white mb-2">Send Your AI Agent to Vault402</h4>
-          <p className="text-sm text-brand-grey/60 mb-6 font-light">Read instructions and follow the steps below to join Vault402.</p>
+          <div className="p-8 md:p-12">
+            <h4 className="text-xl font-serif text-brand-white mb-2">Send Your AI Agent to Vault402</h4>
+            <p className="text-sm text-brand-grey/60 mb-6 font-light">Read instructions and follow the steps below to join Vault402.</p>
 
-          <ul className="space-y-4 font-mono text-xs text-brand-grey/80">
-            <li className="flex gap-4">
-              <span className="text-brand-red">01.</span>
-              <span>Send this to your agent</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="text-brand-red">02.</span>
-              <span>They sign up & send you a claim link</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="text-brand-red">03.</span>
-              <span>Tweet to verify ownership</span>
-            </li>
-          </ul>
+            <ul className="space-y-4 font-mono text-xs text-brand-grey/80">
+              <li className="flex gap-4">
+                <span className="text-brand-red">01.</span>
+                <span>Send this to your agent</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="text-brand-red">02.</span>
+                <span>They sign up & send you a claim link</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="text-brand-red">03.</span>
+                <span>Tweet to verify ownership</span>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div className="mt-40 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-brand-grey/20 pt-20">
-        <div className="p-8 space-y-6 group bg-brand-grey/5 border border-brand-grey/20 rounded-[2.5rem] hover:border-brand-red/30 transition-all">
-          <div className="w-12 h-12 border border-brand-red rounded-full flex items-center justify-center text-brand-red font-mono text-xl group-hover:bg-brand-red group-hover:text-white transition-all">
-            01
+        <div className="mt-40 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-brand-grey/20 pt-20">
+          <div className="p-8 space-y-6 group bg-brand-grey/5 border border-brand-grey/20 rounded-[2.5rem] hover:border-brand-red/30 transition-all">
+            <div className="w-12 h-12 border border-brand-red rounded-full flex items-center justify-center text-brand-red font-mono text-xl group-hover:bg-brand-red group-hover:text-white transition-all">
+              01
+            </div>
+            <h3 className="text-4xl font-serif italic text-brand-white">Automated Spending</h3>
+            <p className="text-brand-grey font-light text-lg">A unified wallet for your agent. It holds USDC and signs transactions automatically when your agent needs to pay for compute, APIs, or data.</p>
           </div>
-          <h3 className="text-4xl font-serif italic text-brand-white">Automated Spending</h3>
-          <p className="text-brand-grey font-light text-lg">A unified wallet for your agent. It holds USDC and signs transactions automatically when your agent needs to pay for compute, APIs, or data.</p>
-        </div>
-        <div className="p-8 space-y-6 group bg-brand-grey/5 border border-brand-grey/20 rounded-[2.5rem] hover:border-brand-red/30 transition-all">
-          <div className="w-12 h-12 border border-brand-red rounded-full flex items-center justify-center text-brand-red font-mono text-xl group-hover:bg-brand-red group-hover:text-white transition-all">
-            02
+          <div className="p-8 space-y-6 group bg-brand-grey/5 border border-brand-grey/20 rounded-[2.5rem] hover:border-brand-red/30 transition-all">
+            <div className="w-12 h-12 border border-brand-red rounded-full flex items-center justify-center text-brand-red font-mono text-xl group-hover:bg-brand-red group-hover:text-white transition-all">
+              02
+            </div>
+            <h3 className="text-4xl font-serif italic text-brand-white">Autonomous Earning</h3>
+            <p className="text-brand-grey font-light text-lg">Vault402 intercepts incoming traffic to your agent and enforces x402 payment headers. Monetize your proprietary intelligence instantly.</p>
           </div>
-          <h3 className="text-4xl font-serif italic text-brand-white">Autonomous Earning</h3>
-          <p className="text-brand-grey font-light text-lg">Vault402 intercepts incoming traffic to your agent and enforces x402 payment headers. Monetize your proprietary intelligence instantly.</p>
         </div>
       </div>
     </div>
