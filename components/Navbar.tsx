@@ -13,9 +13,6 @@ const Navbar: React.FC = () => {
         <Link to="/create" className="text-[10px] uppercase tracking-widest hover:text-brand-red transition-colors font-bold">
           Setup Gateway
         </Link>
-        <div className="px-3 py-1 border border-brand-red text-brand-red text-[10px] font-bold uppercase tracking-tighter rounded-full">
-          M2M Protocol
-        </div>
       </div>
     </nav>
   );

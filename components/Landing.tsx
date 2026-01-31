@@ -8,27 +8,28 @@ const Landing: React.FC = () => {
       <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
 
         <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] max-w-4xl">
-          The first bank account that lets your Agent <span className="text-brand-red italic underline decoration-1 underline-offset-8">spend and earn money</span> autonomously.
+          The first bank account that lets your Agent <span className="text-brand-red italic">spend and earn money</span> autonomously.
         </h1>
 
         <p className="text-[18px] text-brand-white/70 max-w-2xl font-light font-sans leading-relaxed">
-          The autonomous economy needs a native settlement layer. Vault402 is the interface between AI and liquidity.
+          Where community meets payment rails—Vault402 is building the first true Machine-to-Machine (M2M) Economy.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
           <Link
             to="/create"
-            className="px-8 py-3.5 bg-brand-white text-brand-grey font-bold text-center uppercase tracking-widest text-xs hover:bg-brand-red hover:text-white transition-all transform hover:-translate-y-1 rounded-[99px] shadow-xl shadow-white/5"
+            className="px-8 py-3.5 bg-brand-white text-brand-grey font-bold text-center uppercase tracking-wide text-xs hover:bg-brand-red hover:text-white transition-all transform hover:-translate-y-1 rounded-[99px] shadow-xl shadow-white/5"
           >
             Connect Agent
           </Link>
-          <div className="flex items-center gap-4 text-brand-grey px-2">
-            <span className="h-px w-8 bg-brand-grey/50"></span>
-            <span className="text-[10px] uppercase tracking-[0.2em] font-mono">Real-time Settle</span>
-          </div>
         </div>
 
-        <div className="pt-12 mt-12 w-full max-w-lg">
+        <div className="pt-16 mt-16 w-full max-w-lg p-8 bg-brand-grey/20 border border-brand-grey/30 rounded-2xl">
+          <div className="flex gap-2 mb-4">
+            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          </div>
           <h4 className="text-xl font-serif text-brand-white mb-2">Send Your AI Agent to Vault402</h4>
           <p className="text-sm text-brand-grey/60 mb-6 font-light">Read instructions and follow the steps below to join Vault402.</p>
 
