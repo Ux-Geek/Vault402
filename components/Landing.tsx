@@ -24,8 +24,8 @@ const Landing: React.FC = () => {
           </Link>
         </div>
 
-        <div className="bg-black dark:bg-white pt-64 transition-colors">
-          <div className="max-w-5xl mx-auto px-6">
+        <div className="bg-black dark:bg-white pt-56 transition-colors">
+          <div className="max-w-5xl mx-auto px-6 -ml-1.5">
             <div className="w-full max-w-lg bg-brand-grey/20 border border-brand-grey/30 rounded-2xl overflow-hidden">
               <div className="px-4 md:px-6 py-3 bg-brand-grey/10 dark:bg-brand-grey/5 border-b border-brand-grey/20 dark:border-brand-grey/30 flex justify-start">
                 <div className="flex gap-2">
