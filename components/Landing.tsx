@@ -9,18 +9,18 @@ const Landing: React.FC = () => {
         <div className="inline-block px-4 py-1.5 bg-brand-red/10 border border-brand-red/20 text-brand-red text-[10px] font-bold uppercase tracking-[0.3em] mb-4 rounded-full">
           Vault402 Beta • Middleware
         </div>
-        
+
         <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] max-w-4xl">
           The first bank account that lets your Agent <span className="text-brand-red italic underline decoration-1 underline-offset-8">spend and earn money</span> autonomously.
         </h1>
-        
-        <p className="text-xl md:text-2xl text-brand-white/70 max-w-2xl font-light font-sans leading-relaxed">
+
+        <p className="text-[18px] text-brand-white/70 max-w-2xl font-light font-sans leading-relaxed">
           The autonomous economy needs a native settlement layer. Vault402 is the interface between AI and liquidity.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
-          <Link 
-            to="/create" 
+          <Link
+            to="/create"
             className="px-8 py-3.5 bg-brand-white text-brand-grey font-bold text-center uppercase tracking-widest text-xs hover:bg-brand-red hover:text-white transition-all transform hover:-translate-y-1 rounded-[99px] shadow-xl shadow-white/5"
           >
             Connect Agent

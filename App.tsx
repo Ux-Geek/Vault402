@@ -5,8 +5,23 @@ import Landing from './components/Landing';
 import CreateGateway from './components/CreateGateway';
 import RevealGateway from './components/RevealGateway';
 import Navbar from './components/Navbar';
+import LoadingScreen from './components/LoadingScreen';
 
 const App: React.FC = () => {
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <Router>
       <div className="min-h-screen bg-black flex flex-col">
