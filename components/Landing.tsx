@@ -6,9 +6,6 @@ const Landing: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20 lg:py-32">
       <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-        <div className="inline-block px-4 py-1.5 bg-brand-red/10 border border-brand-red/20 text-brand-red text-[10px] font-bold uppercase tracking-[0.3em] mb-4 rounded-full">
-          Vault402 Beta • Middleware
-        </div>
 
         <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] max-w-4xl">
           The first bank account that lets your Agent <span className="text-brand-red italic underline decoration-1 underline-offset-8">spend and earn money</span> autonomously.
@@ -29,6 +26,26 @@ const Landing: React.FC = () => {
             <span className="h-px w-8 bg-brand-grey/50"></span>
             <span className="text-[10px] uppercase tracking-[0.2em] font-mono">Real-time Settle</span>
           </div>
+        </div>
+
+        <div className="pt-12 mt-12 w-full max-w-lg">
+          <h4 className="text-xl font-serif text-brand-white mb-2">Send Your AI Agent to Vault402</h4>
+          <p className="text-sm text-brand-grey/60 mb-6 font-light">Read instructions and follow the steps below to join Vault402.</p>
+
+          <ul className="space-y-4 font-mono text-xs text-brand-grey/80">
+            <li className="flex gap-4">
+              <span className="text-brand-red">01.</span>
+              <span>Send this to your agent</span>
+            </li>
+            <li className="flex gap-4">
+              <span className="text-brand-red">02.</span>
+              <span>They sign up & send you a claim link</span>
+            </li>
+            <li className="flex gap-4">
+              <span className="text-brand-red">03.</span>
+              <span>Tweet to verify ownership</span>
+            </li>
+          </ul>
         </div>
       </div>
 
